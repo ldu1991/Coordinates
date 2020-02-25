@@ -1,0 +1,11 @@
+*.swp
+*~
+*.iws
+*.log
+.idea
+.htaccess
+*.iml
+*.json
+out
+gen
+node_modules/

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Coordinates</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,shrink-to-fit=no">
+  <link rel="shortcut icon" href="">
+  <link rel="apple-touch-icon-precomposed" href="">
+  <meta name="theme-color" content="#2775FF">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<style>
+  .main-wrapper {
+    height: 100vh;
+    position: relative;
+  }
+
+  .element-coordinates {
+    position: fixed;
+    top: 300px;
+    left: 400px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000000;
+    background-color: rgba(254, 255, 8, 0.35);
+    padding: 15px 0;
+  }
+</style>
+
+<main class="main-wrapper">
+
+  <div class="element-coordinates"></div>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="coordinates.js"></script>
+
+<script>
+
+  console.log(Coordinates('.element-coordinates'));
+  console.log(Coordinates(document.querySelector('.element-coordinates')));
+
+  (function ($) {
+    "use strict";
+
+    var element = $('.element-coordinates');
+    var elementCoordinates = new Coordinates(element); // version 1 jQuery
+    //var elementCoordinates = new Coordinates('.element-coordinates'); // version 2 native JS
+    //var elementCoordinates = new Coordinates(document.querySelector('.element-coordinates')); // version 3 native JS
+
+    var html = '<ul>\n' +
+      '<li>top: ' + elementCoordinates.top + '</li>\n' +
+      '<li>right: ' + elementCoordinates.right + '</li>\n' +
+      '<li>bottom: ' + elementCoordinates.bottom + '</li>\n' +
+      '<li>left: ' + elementCoordinates.left + '</li>\n' +
+      '<li>width: ' + elementCoordinates.width + '</li>\n' +
+      '<li>height: ' + elementCoordinates.height + '</li>\n' +
+      '</ul>';
+
+    element.html(html);
+
+  })(jQuery);
+</script>
+</body>
+
+</html>
