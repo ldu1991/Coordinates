@@ -4,7 +4,7 @@ Plugin on native js to determine the coordinates of an element in a browser wind
 
 ## How to ##
 
-1. Download the [coordinates.min.js script](https://bitbucket.org/denis_lipatov/coordinates/src/master/dist/coordinates.min.js) and include **Coordinates** in your webpage.
+1. Download the [coordinates.min.js script](https://raw.githubusercontent.com/ldu1991/coordinates/master/dist/coordinates.min.js) and include **Coordinates** in your webpage.
 
     ```
     <script src="coordinates.min.js" async=""></script>
